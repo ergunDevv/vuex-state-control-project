@@ -6,11 +6,16 @@
     <button @click="subtractFromCounter(value)">-</button>
     <input type="number" v-model="value" />
     <button @click="addToCounter(parseInt(value))">+</button>
+
+    <div>
+      <button class="btn" @click="addRandomNumber">Add by Random Number</button>
+    </div>
+
   </div>
 </template>
   
   <script >
-  import { mapState , mapMutations} from 'vuex';
+  import { mapState , mapMutations , mapActions} from 'vuex';
 export default {
   name: "CounterCO",
   data() {
@@ -22,8 +27,10 @@ export default {
     ...mapState(["counter"])
   },
   methods:{
-    ...mapMutations(["addToCounter","subtractFromCounter"])
-  }
+    ...mapMutations(["addToCounter","subtractFromCounter"]),
+    ...mapActions(["addRandomNumber"])
+  },
+
 };
 </script>
   
@@ -53,4 +60,6 @@ input {
   color: white;
   cursor: pointer;
 }
+
+
 </style>
