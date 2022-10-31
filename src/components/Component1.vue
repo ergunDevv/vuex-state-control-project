@@ -1,8 +1,8 @@
 <template>
     <div>
         <h1>
-            {{ counter3 }}
-            {{ counter3 }}
+            <!-- {{ counter3 }}
+            {{ counter3 }} -->
             Component1
         </h1>
         <Component2/>
@@ -12,7 +12,7 @@
   <script >
   import Component2 from './Component2.vue';
 
-  import { mapState } from 'vuex';
+//   import { mapState } from 'vuex';
 
   export default {
 
@@ -20,9 +20,9 @@
     components:{
         Component2
     },
-    computed:{
-        ...mapState(["counter","counter3"])
-    }
+    // computed:{
+    //     ...mapState(["counter","counter3"])
+    // }
   };
   </script>
   
