@@ -1,20 +1,25 @@
 <template>
     <div>
-        <h1>
-            Component3
-        </h1>
-        <Component4/>
+      <h1>
+        Component3
+      </h1>
+      <Component4/>
+      <History/>
     </div>
   </template>
   
   <script >
     import Component4 from './Component4.vue';
+import History from './History.vue';
   export default {
     name: "Component3Co",
     components:{
-        Component4
+        Component4,
+        History
     }
-  };
+
+    }
+  
   </script>
   
   <style>
